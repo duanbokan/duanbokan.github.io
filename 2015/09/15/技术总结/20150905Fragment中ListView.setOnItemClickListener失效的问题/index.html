@@ -9,7 +9,7 @@
   <title>Fragment中ListView.setOnItemClickListener失效的问题 | 段博侃的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="今天在写代码的时候发现一个很奇怪的现象，当一个Activity继承自Fragment时，在其中设置ListView.setOnItemClickListener会没有作用，不会抛出异常，打断点也进不去，没有找到原因，但是找到了解决方案： 在ListView的Item的Layout代码最外层的Layout中设置： android:clickable=&amp;quot;false&amp;quot; andro">
-<meta name="keywords" content="问题记录,技术总结,点击失效">
+<meta name="keywords" content="问题记录,点击失效,技术总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Fragment中ListView.setOnItemClickListener失效的问题">
 <meta property="og:url" content="http://yoursite.com/2015/09/15/技术总结/20150905Fragment中ListView.setOnItemClickListener失效的问题/index.html">
@@ -227,11 +227,11 @@ android:focusable=&quot;false&quot;
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术总结</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">点击失效</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">点击失效</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术总结</a>
         		</li>
       		
 		</ul>
@@ -438,7 +438,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">吃喝玩乐</a>
+                <a href="javascript:void(0)" class="js-tag color3">String.xml空格</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">问题记录</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -462,11 +466,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">String.xml空格</a>
+                <a href="javascript:void(0)" class="js-tag color5">点击失效</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">问题记录</a>
+                <a href="javascript:void(0)" class="js-tag color5">技术总结</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -478,11 +482,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">技术总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">点击失效</a>
+                <a href="javascript:void(0)" class="js-tag color5">吃喝玩乐</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -494,19 +494,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Android</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">横竖屏切换</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">EventBus</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">观察者模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">横竖屏切换</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -534,6 +534,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">AS配置</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">CodeFormat</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Bouncycast</a>
               </li>
              
@@ -551,14 +559,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">序列化</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AS配置</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">CodeFormat</a>
               </li>
              
               <li class="article-tag-list-item">
