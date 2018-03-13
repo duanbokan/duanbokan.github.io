@@ -9,7 +9,7 @@
   <title>Android开发中使用CRC校验 | 段博侃的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="最近手头的一个项目，客户端和服务端之间进行通讯时，由于受到当地网络等问题的限制，使用Json传输，数据内容过于庞大，需要对该信息进行压缩，以便实现快速传输。这里使用Byte数组进行传输，前后台对协议进行商定，而后编码、传输、解码实现通信，传输过程中，为保证传输内容的完整性，需要使用CRC进行校验。 1. CRC概念——百度百科CRC即循环冗余校验码（Cyclic Redundancy Check[">
-<meta name="keywords" content="AS配置,CodeFormat,技术总结">
+<meta name="keywords" content="技术总结,AS配置,CodeFormat">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android开发中使用CRC校验">
 <meta property="og:url" content="http://yoursite.com/2016/04/29/技术总结/20160429Android开发中使用CRC校验/index.html">
@@ -89,9 +89,7 @@
 		        
 					<a class="weibo" target="_blank" href="https://weibo.com/sbook213044" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="blog" target="_blank" href="http://blog.csdn.net/duanbokan" title="blog"><i class="icon-blog"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="jianshu" target="_blank" href="http://blog.csdn.net/duanbokan" title="jianshu"><i class="icon-jianshu"></i></a>
 		        
 			</div>
 		</nav>
@@ -134,9 +132,7 @@
 			        
 						<a class="weibo" target="_blank" href="https://weibo.com/sbook213044" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="blog" target="_blank" href="http://blog.csdn.net/duanbokan" title="blog"><i class="icon-blog"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="jianshu" target="_blank" href="http://blog.csdn.net/duanbokan" title="jianshu"><i class="icon-jianshu"></i></a>
 			        
 				</div>
 			</nav>
@@ -287,15 +283,15 @@ public static boolean isPassCRC(byte[] srcByte, int length)
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术总结</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AS配置</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">CodeFormat</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术总结</a>
         		</li>
       		
 		</ul>
@@ -502,19 +498,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">吃喝玩乐</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">FastDFS</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">String.xml空格</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">问题记录</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -530,7 +522,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">点击失效</a>
+                <a href="javascript:void(0)" class="js-tag color3">String.xml空格</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">问题记录</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -539,6 +535,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">代码审查</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">技术总结</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">点击失效</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -578,18 +582,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Bouncycast</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Https证书生成</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">环境搭建</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Handshake failed</a>
               </li>
              
@@ -599,6 +591,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">6.0握手失败</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Bouncycast</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Https证书生成</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">环境搭建</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -618,14 +622,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Monkey</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">自动化测试工具</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">GooglePlay更新</a>
               </li>
              
@@ -634,19 +630,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Monkey</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">自动化测试工具</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">MonkeyRunner</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HEIF</a>
+                <a href="javascript:void(0)" class="js-tag color5">IJKPlayer</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">IOS11图片格式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">图片存储</a>
+                <a href="javascript:void(0)" class="js-tag color1">跳转关键帧</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -662,19 +662,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">IJKPlayer</a>
+                <a href="javascript:void(0)" class="js-tag color5">HEIF</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">跳转关键帧</a>
+                <a href="javascript:void(0)" class="js-tag color5">IOS11图片格式</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">技术总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">吃喝玩乐</a>
+                <a href="javascript:void(0)" class="js-tag color5">图片存储</a>
               </li>
             
             <div class="clearfix"></div>
