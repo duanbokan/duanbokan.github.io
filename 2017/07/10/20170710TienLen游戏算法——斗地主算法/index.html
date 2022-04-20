@@ -1,0 +1,733 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>斗地主算法 | 沙僧</title><meta name="keywords" content="Android , 斗地主 , 算法"><meta name="author" content="沙僧"><meta name="copyright" content="沙僧"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="斗地主算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="斗地主算法">
+<meta property="og:url" content="http://example.com/2017/07/10/20170710TienLen%E6%B8%B8%E6%88%8F%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E6%96%97%E5%9C%B0%E4%B8%BB%E7%AE%97%E6%B3%95/index.html">
+<meta property="og:site_name" content="沙僧">
+<meta property="og:description" content="斗地主算法">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://image.jucaiwy.com/image/20160710/tienlen_small.jpg">
+<meta property="article:published_time" content="2017-07-10T10:34:46.000Z">
+<meta property="article:modified_time" content="2020-12-09T06:34:56.010Z">
+<meta property="article:author" content="沙僧">
+<meta property="article:tag" content="Android">
+<meta property="article:tag" content="斗地主">
+<meta property="article:tag" content="算法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://image.jucaiwy.com/image/20160710/tienlen_small.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2017/07/10/20170710TienLen%E6%B8%B8%E6%88%8F%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E6%96%97%E5%9C%B0%E4%B8%BB%E7%AE%97%E6%B3%95/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '斗地主算法',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-12-09 14:34:56'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="沙僧" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="http://image.jucaiwy.com/favicon.ico" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">25</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">46</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://image.jucaiwy.com/image/20160710/tienlen_width.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">沙僧</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">斗地主算法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2017-07-10T10:34:46.000Z" title="发表于 2017-07-10 18:34:46">2017-07-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-09T06:34:56.010Z" title="更新于 2020-12-09 14:34:56">2020-12-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Android/">Android</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>最近需要做一个类似于斗地主的游戏，由于只是类似斗地主的游戏，因此，规则方面和斗地主存在一些不同，但是在算法上，也是大同小异，现对该游戏算法进行总结：</p>
+<h3 id="1-定义牌对象"><a href="#1-定义牌对象" class="headerlink" title="1.定义牌对象"></a>1.定义牌对象</h3><p> 首先需要对牌对象进行定义，正常斗地主玩法下，一张牌只有一个属性，就是数字大小，而不管花色，而在我们的游戏中，同样数字的牌，不同花色之间还可以比较，因此，我们的牌一共有两个基本属性，分别为花色和大小。</p>
+<h4 id="1-1-规则"><a href="#1-1-规则" class="headerlink" title="1.1 规则"></a>1.1 规则</h4><p>对于花色，规则定义如下：黑桃&gt;梅花&gt;方片&gt;红桃</p>
+<p>对于数字，规则定义如下：2最大，3最小</p>
+<h4 id="1-2-建模"><a href="#1-2-建模" class="headerlink" title="1.2 建模"></a>1.2 建模</h4><p>我们将牌的牌面实际数字使用数字进行标记，使用数字3到15表示真实牌的3到2，其中11表示J，12表示Q，13表示K，14表示A，15表示2，其余数字分别代表真实牌面数字。</p>
+<p>将牌的牌面花色同样使用数字进行标记：根据从大到小，分别标记为：4——黑桃，3——梅花，2——方片，1——红桃。</p>
+<p>这样，对于一张牌的数字模型，使用以下公式进行标记：</p>
+<p>牌数字模型大小  &#x3D;  牌面数字模型大小 * 10 + 牌面花色模型大小</p>
+<pre><code>// 牌号点数：如3~J~A~2,使用3~15数字
+private int cardNumber;
+    
+// 牌色：如4红桃, 3方片, 2梅花, 1黑桃
+private int cardColor;
+    
+// 牌全称：例34是红桃3,152是梅花2,113是方片J
+private String cardName;
+    
+// 牌描述：例红桃3,梅花2
+private String cardDesc;
+</code></pre>
+<h4 id="1-3-总结"><a href="#1-3-总结" class="headerlink" title="1.3 总结"></a>1.3 总结</h4><p>经过上边的标记，我们很容易将一张牌的模型进行数字化，例如：</p>
+<p>154——黑桃2</p>
+<p>151——红桃2</p>
+<p>83——梅花8</p>
+<p>这样154&gt;151，同样黑桃2大于红桃2</p>
+<p>151&gt;83，同样红桃2大于梅花8</p>
+<h3 id="2-构建一副牌"><a href="#2-构建一副牌" class="headerlink" title="2. 构建一副牌"></a>2. 构建一副牌</h3><p>构建一副牌可以从花色、牌面大小、牌的名称、牌的描述四个方面进行构建，其中花色（4——黑桃，3——梅花，2——方片，1——红桃），大小为：使用数字3到15表示真实牌的3到2，牌名称即牌大小和花色组成的数字大小，描述是通用的牌的叫法，比如：154——黑桃2 牌名称为154 描述为 黑桃2</p>
+<p>这里需要主要的是：<strong>斗地主中存在王，大小王，共54张牌，而在我们的TienLen游戏中不存在大小王，只有52张牌</strong></p>
+<pre><code>/**
+ * 初始化牌
+ * @return
+ */
+public List&lt;CardInfo&gt; initCard() &#123;
+    List&lt;CardInfo&gt; cardList = new ArrayList&lt;CardInfo&gt;();
+    for (int i = 1; i &lt; 5; i++) &#123;
+        for (int j = 3; j &lt; 16; j++) &#123;
+            CardInfo cardInfo = new CardInfo();
+            cardInfo.setCardNumber(j);
+            cardInfo.setCardColor(i);
+            cardInfo.setCardName(j * 10 + i + &quot;&quot;);
+            switch (i) &#123;
+                case 1:
+                    cardInfo.setCardDesc(&quot;红桃&quot; + j);
+                    break;
+                case 2:
+                    cardInfo.setCardDesc(&quot;方片&quot; + j);
+                    break;
+                case 3:
+                    cardInfo.setCardDesc(&quot;梅花&quot; + j);
+                    break;
+                case 4:
+                    cardInfo.setCardDesc(&quot;黑桃&quot; + j);
+                    break;
+            &#125;
+            cardList.add(cardInfo);
+        &#125;
+    &#125;
+    return cardList;
+&#125;
+</code></pre>
+<h3 id="3-洗牌"><a href="#3-洗牌" class="headerlink" title="3. 洗牌"></a>3. 洗牌</h3><p>洗牌只需要将牌进行打乱即可，这里考虑使用随机数进行交换，模拟洗牌，但是这样的算法存在缺陷，即有可能洗完以后，牌仍然保持原样</p>
+<pre><code>/**
+ * 洗牌
+ *
+ * @param cardList 初始化号的牌
+ * @return
+ */
+public List&lt;CardInfo&gt; washCard(List&lt;CardInfo&gt; cardList) &#123;
+    List&lt;CardInfo&gt; randomCardList = cardList;
+    for (int i = 0; i &lt; 100; i++) &#123;
+        Random random = new Random();
+        // 找出52以内的随机数，然后交换位置
+        int a = random.nextInt(52);
+        int b = random.nextInt(52);
+        CardInfo cardInfoTemp = randomCardList.get(a);
+        randomCardList.set(a, randomCardList.get(b));
+        randomCardList.set(b, cardInfoTemp);
+    &#125;
+
+    return randomCardList;
+&#125;
+</code></pre>
+<h3 id="4-发牌"><a href="#4-发牌" class="headerlink" title="4. 发牌"></a>4. 发牌</h3><p>发牌算法很简单，将已经洗好的52张牌，顺序发给各个玩家。这里我们与斗地主区别在于，我们这里一共有四个玩家，因此需要将牌分为4份：</p>
+<pre><code>/**
+ * 发牌
+ *
+ * @param cardList 洗好的牌
+ * @return
+ */
+public List&lt;CardInfo&gt;[] handCard(List&lt;CardInfo&gt; cardList) &#123;
+    List&lt;CardInfo&gt; playerCardList[] = new Vector[4];
+    for (int i = 0; i &lt; 4; i++) &#123;
+        playerCardList[i] = new Vector&lt;CardInfo&gt;();
+    &#125;
+    for (int j = 0; j &lt; 52; j++) &#123;
+        switch (j % 4) &#123;
+            case 0:
+                playerCardList[0].add(cardList.get(j));
+                break;
+            case 1:
+                playerCardList[1].add(cardList.get(j));
+                break;
+            case 2:
+                playerCardList[2].add(cardList.get(j));
+                break;
+            case 3:
+                playerCardList[3].add(cardList.get(j));
+                break;
+            default:
+                break;
+        &#125;
+    &#125;
+    return playerCardList;
+&#125;
+</code></pre>
+<h3 id="5-捋牌"><a href="#5-捋牌" class="headerlink" title="5. 捋牌"></a>5. 捋牌</h3><p>也就是对牌进行排序，从大到小进行排序，这样出来的牌，便于往后进行分类等运算。</p>
+<pre><code>/**
+ * 排序，按照从大到小的顺序进行排
+ *
+ * @param cardList
+ * @return
+ */
+public List&lt;CardInfo&gt; sortCard(List&lt;CardInfo&gt; cardList) &#123;
+    Collections.sort(cardList, new Comparator&lt;CardInfo&gt;() &#123;
+        @Override
+        public int compare(CardInfo cardInfo1, CardInfo cardInfo2) &#123;
+            int cardNum1 = Integer.valueOf(cardInfo1.getCardName());
+            int cardNum2 = Integer.valueOf(cardInfo2.getCardName());
+
+            if (cardNum1 &gt; cardNum2) &#123;
+                return -1;
+            &#125; else if (cardNum1 == cardNum2) &#123;
+                return 0;
+            &#125; else &#123;
+                return 1;
+            &#125;
+        &#125;
+    &#125;);
+    return cardList;
+&#125;
+</code></pre>
+<h3 id="6-出牌"><a href="#6-出牌" class="headerlink" title="6. 出牌"></a>6. 出牌</h3><p>   出牌时，应该根据规则进行出牌，首先、判断用户所选择的牌是否符合规则，即是否是单牌、对子、三张、链子、炸弹等</p>
+<h4 id="6-1-单张牌"><a href="#6-1-单张牌" class="headerlink" title="6.1 单张牌"></a>6.1 单张牌</h4><p>获取单张牌的算法很简单，任意一张牌，都可以作为单张牌使用，因此只需要将所有的牌都添加到单张牌的列表中即可。</p>
+<pre><code> /***
+ * 获取单张牌
+ *
+ * @param mCardList
+ * @return
+ */
+public List&lt;List&lt;CardInfo&gt;&gt; get1(List&lt;CardInfo&gt; mCardList) &#123;
+    List&lt;List&lt;CardInfo&gt;&gt; all1List = new ArrayList&lt;&gt;();
+    List&lt;CardInfo&gt; cardList;
+    sortCardAsc(mCardList);
+    for (int i = 0, length = mCardList.size(); i &lt; length; i++) &#123;
+        cardList = new ArrayList&lt;&gt;();
+        cardList.add(mCardList.get(i));
+        all1List.add(cardList);
+    &#125;
+
+    return all1List;
+&#125;
+</code></pre>
+<h4 id="6-2-对子"><a href="#6-2-对子" class="headerlink" title="6.2 对子"></a>6.2 对子</h4><p>获取对子时，需要注意，因为我们TienLen游戏的规则中，不仅需要比较牌面点数大小，还需要比较花色大小，所以，同样4个2，可能组合成多种对子，且大小不一样，比如黑桃2和梅花2，比如红桃2和方片2</p>
+<pre><code> /**
+ * 获取对子
+ * 这里对i+1 i+2 i+3分别和第i张牌进行对比，
+ * 举例：比如四个2，可以黑桃2和方片2一对，也可以是梅花2和红桃2一对
+ *
+ * @param mCardList
+ * @return
+ */
+public List&lt;List&lt;CardInfo&gt;&gt; get11(List&lt;CardInfo&gt; mCardList) &#123;
+    // 先对牌进行排序
+    sortCardAsc(mCardList);
+    List&lt;List&lt;CardInfo&gt;&gt; all11CardList = new ArrayList&lt;&gt;();
+    List&lt;CardInfo&gt; cardList;
+    for (int i = 0, length = mCardList.size(); i &lt; length; i++) &#123;
+        if (i + 1 &lt; length
+                &amp;&amp; mCardList.get(i).getCardNumber() == mCardList.get(i + 1).getCardNumber()) &#123;
+            cardList = new ArrayList&lt;&gt;();
+            cardList.add(mCardList.get(i));
+            cardList.add(mCardList.get(i + 1));
+            all11CardList.add(cardList);
+        &#125;
+        if (i + 2 &lt; length
+                &amp;&amp; mCardList.get(i).getCardNumber() == mCardList.get(i + 2).getCardNumber()) &#123;
+            cardList = new ArrayList&lt;&gt;();
+            cardList.add(mCardList.get(i));
+            cardList.add(mCardList.get(i + 2));
+            all11CardList.add(cardList);
+        &#125;
+        if (i + 3 &lt; length
+                &amp;&amp; mCardList.get(i).getCardNumber() == mCardList.get(i + 3).getCardNumber()) &#123;
+            cardList = new ArrayList&lt;&gt;();
+            cardList.add(mCardList.get(i));
+            cardList.add(mCardList.get(i + 3));
+            all11CardList.add(cardList);
+        &#125;
+    &#125;
+    return all11CardList;
+&#125;
+</code></pre>
+<h3 id="6-3-三个"><a href="#6-3-三个" class="headerlink" title="6.3 三个"></a>6.3 三个</h3><p>在斗地主的规则中，好像也是三个也可以一起出，但是需要带一个或者一对，我们TienLen游戏中不需要带，也不能带，可以直接出，比如三个三，三个四，这样的牌，获取的算法和上边对子的获取算法一致</p>
+<pre><code> /***
+ * 获取三个
+ * 算法个获取对子的算法类似
+ *
+ * @param mCardList
+ * @return
+ */
+public List&lt;List&lt;CardInfo&gt;&gt; get111(List&lt;CardInfo&gt; mCardList) &#123;
+    List&lt;List&lt;CardInfo&gt;&gt; all111List = new ArrayList&lt;&gt;();
+    List&lt;CardInfo&gt; cardList;
+    // 先对牌进行排序
+    sortCardAsc(mCardList);
+
+    for (int i = 0, length = mCardList.size(); i &lt; length; i++) &#123;
+        if (i + 2 &lt; length
+                &amp;&amp; mCardList.get(i).getCardNumber() == mCardList.get(i + 2).getCardNumber()) &#123;
+            cardList = new ArrayList&lt;&gt;();
+            cardList.add(mCardList.get(i));
+            cardList.add(mCardList.get(i + 1));
+            cardList.add(mCardList.get(i + 2));
+            all111List.add(cardList);
+        &#125;
+    &#125;
+    return all111List;
+&#125;
+</code></pre>
+<h3 id="6-4-炸弹"><a href="#6-4-炸弹" class="headerlink" title="6.4 炸弹"></a>6.4 炸弹</h3><p>炸弹，不论在斗地主中还是我们现在做的TienLen中，都是一样的作用，一样的获取方法，和获取对子，三个的方法一致，这里直接上代码：</p>
+<pre><code>/***
+ * 获取炸弹
+ *
+ * @param mCardList
+ * @return
+ */
+public List&lt;List&lt;CardInfo&gt;&gt; get1111(List&lt;CardInfo&gt; mCardList) &#123;
+    List&lt;List&lt;CardInfo&gt;&gt; all1111List = new ArrayList&lt;&gt;();
+    List&lt;CardInfo&gt; cardList;
+
+    for (int i = 0, length = mCardList.size(); i &lt; length; i++) &#123;
+        if (i + 3 &lt; length
+                &amp;&amp; mCardList.get(i).getCardNumber() == mCardList.get(i + 3).getCardNumber()) &#123;
+            cardList = new ArrayList&lt;&gt;();
+            cardList.add(mCardList.get(i));
+            cardList.add(mCardList.get(i + 1));
+            cardList.add(mCardList.get(i + 2));
+            cardList.add(mCardList.get(i + 3));
+            all1111List.add(cardList);
+        &#125;
+    &#125;
+    return all1111List;
+&#125;
+</code></pre>
+<h3 id="6-5-链子"><a href="#6-5-链子" class="headerlink" title="6.5 链子"></a>6.5 链子</h3><p>终于说到了这个牌型——链子，链子在不同的玩法中，可以出不同的长度，在我们的TienLen中最少是三联，这里获取时，先对手牌进行排序，排好序后，进行遍历，找到能和当前牌连接起来的，且牌长度大于3的，均属于链子：</p>
+<pre><code>/**
+ * 获取链子
+ *
+ * @param mCardList
+ * @return
+ */
+public List&lt;List&lt;CardInfo&gt;&gt; get123(List&lt;CardInfo&gt; mCardList) &#123;
+    // 链子长度必须大于3,即最少出3连
+    if (mCardList.size() &lt; 3) &#123;
+        return null;
+    &#125;
+    // 构建返回数据
+    List&lt;CardInfo&gt; tempCardList = new ArrayList&lt;&gt;();
+    List&lt;List&lt;CardInfo&gt;&gt; all123List = new ArrayList&lt;&gt;();
+
+    // 先去掉2
+    for (int i = 0; i &lt; mCardList.size(); i++) &#123;
+        if (mCardList.get(i).getCardNumber() != 15) &#123;
+            tempCardList.add(mCardList.get(i));
+        &#125;
+    &#125;
+    // 重新进行排序
+    sortCardAsc(tempCardList);
+
+    for (int i = 0; i &lt; tempCardList.size(); i++) &#123;
+        CardInfo tempCardInfo = tempCardList.get(i);
+        List&lt;CardInfo&gt; cardList = new ArrayList&lt;&gt;();
+        cardList.add(tempCardInfo);
+        List&lt;CardInfo&gt; cardListTempAfter = new ArrayList&lt;&gt;();
+        for (int j = i + 1; j &lt; tempCardList.size(); j++) &#123;
+            // 判断当前牌是否个下一个牌能连起来（当前牌是5，当下一个是5+1=6时，即连起来了，当连起来大于3个牌时，即可以认为是一连）
+            if ((tempCardInfo.getCardNumber() + 1) == tempCardList.get(j).getCardNumber()) &#123;
+                cardListTempAfter.clear();
+                cardListTempAfter.addAll(cardList);
+                cardList.add(tempCardList.get(j));
+                tempCardInfo = tempCardList.get(j);
+                if (cardList.size() &gt;= 3) &#123;
+                    List&lt;CardInfo&gt; cardListTemp = new ArrayList&lt;&gt;();
+                    cardListTemp.addAll(cardList);
+                    all123List.add(cardList);
+
+                    cardList = new ArrayList&lt;&gt;();
+                    cardList.addAll(cardListTemp);
+                &#125;
+            &#125; else if (tempCardInfo.getCardNumber() == tempCardList.get(j).getCardNumber()
+                    &amp;&amp; tempCardInfo.getCardNumber() != tempCardList.get(i).getCardNumber()) &#123;
+                List&lt;CardInfo&gt; cardListTemp = new ArrayList&lt;&gt;();
+                cardListTemp.addAll(cardListTempAfter);
+                if (cardListTemp.size() &gt; 0
+                        &amp;&amp; cardListTemp.get(cardListTemp.size() - 1).getCardNumber() != tempCardList
+                        .get(j).getCardNumber()) &#123;
+                    cardListTempAfter.add(tempCardList.get(j));
+                    if (cardListTempAfter.size() &gt;= 3) &#123;
+                        all123List.add(cardListTempAfter);
+                        cardListTempAfter = new ArrayList&lt;&gt;();
+                        cardListTempAfter.addAll(cardListTemp);
+                    &#125;
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+    return all123List;
+&#125;
+</code></pre>
+<h3 id="6-6-双链"><a href="#6-6-双链" class="headerlink" title="6.6 双链"></a>6.6 双链</h3><p>双链，也就是经常说的飞机带翅膀，双链的前提是对子，只有存在对子的情况下，才能找出来双链，所以，其算法也是一样，先找到所有的对子，然后去掉2，进行排序，再按照找链子的方法进行找，这样返回的就是双链。</p>
+<pre><code> /***
+ * 获取飞机
+ *
+ * @param mCardInfoList
+ * @return
+ */
+public List&lt;List&lt;CardInfo&gt;&gt; get112233(List&lt;CardInfo&gt; mCardInfoList) &#123;
+    int length = mCardInfoList.size();
+    // 双链最少为3连，所以最少六张牌
+    if (length &lt; 6) &#123;
+        return null;
+    &#125;
+    // 保存所有的对子
+    List&lt;CardInfo&gt; tempList = new ArrayList&lt;&gt;();
+    // 保存所有不包含2的对子
+    List&lt;CardInfo&gt; apairTempList = new ArrayList&lt;&gt;();
+    // 防止重复添加
+    List&lt;Integer&gt; integerList = new Vector&lt;&gt;();
+
+    // 返回结果
+    List&lt;List&lt;CardInfo&gt;&gt; all112233List = new ArrayList&lt;&gt;();
+
+    // 存储单个双对链子
+    List&lt;CardInfo&gt; cardList;
+
+    // 先获取所有的对子
+    for (int i = 0; i &lt; length; i++) &#123;
+        if (i + 1 &lt; length
+                &amp;&amp; mCardInfoList.get(i).getCardNumber() == mCardInfoList.get(i + 1)
+                .getCardNumber()) &#123;
+            tempList.add(mCardInfoList.get(i));
+            tempList.add(mCardInfoList.get(i + 1));
+            i = i + 1;
+        &#125;
+    &#125;
+    // 排序
+    sortCardAsc(tempList);
+
+    // 去除对2和相同的
+    for (int i = 0, tempLength = tempList.size(); i &lt; tempLength; i++) &#123;
+        if (!integerList.contains(Integer.valueOf(tempList.get(i).getCardNumber()))) &#123;
+            apairTempList.add(tempList.get(i));
+            integerList.add(Integer.valueOf(tempList.get(i).getCardNumber()));
+        &#125;
+    &#125;
+
+    // 双对的链子最少三联
+    if (apairTempList.size() &lt; 3) &#123;
+        return null;
+    &#125;
+
+    // 对之前拿到的对子List进行排序，正序
+    sortCardAsc(tempList);
+
+    // 到这里已经拿到了所有对子中的某一个单牌，只需拿出所有的链子
+    List&lt;List&lt;CardInfo&gt;&gt; get123TempList = get123(apairTempList);
+
+    for (int j = 0; j &lt; get123TempList.size(); j++) &#123;
+        List&lt;CardInfo&gt; list123 = get123TempList.get(j);
+        sortCardAsc(list123);
+        for (int k = 0; k &lt; tempList.size(); k++) &#123;
+            if (tempList.get(k).getCardName().equals(list123.get(0).getCardName())) &#123;
+                cardList = new ArrayList&lt;&gt;();
+                for (int l = k; l &lt; list123.size() * 2 + k; l++) &#123;
+                    cardList.add(tempList.get(l));
+                &#125;
+                all112233List.add(cardList);
+            &#125;
+        &#125;
+    &#125;
+    return all112233List;
+&#125;
+</code></pre>
+<h3 id="7-出牌"><a href="#7-出牌" class="headerlink" title="7 出牌"></a>7 出牌</h3><p>出牌有两种情况，一种是手动选择的，一种是通过提示，自动出牌的。对于手动选择的，需要根据自己当前是否有首先出牌权，进行校验，</p>
+<ol>
+<li>如果当前是自己的局，也就是说，上轮出牌的过程中，自己最大，这局自己首先出，所以只需要校验自己手动选择的牌是否符合规则。</li>
+<li>如果当前是别人的局，也就是说，自己当前跟着别人的局出牌，只能和别人的类型一致，且大于对方，所以需要校验选择的牌类型是否和别人的一致，再校验是否比别人的大，才能出</li>
+</ol>
+<p>对于通过提示出牌的，只适合第二种情况，也就是说，别人出牌，然后自己管，系统会进行提示</p>
+<h4 id="7-1-判断所选择的牌，是否符合已经定义的出牌类型，对应上边所述的第一种情况，只要符合规则均可以出"><a href="#7-1-判断所选择的牌，是否符合已经定义的出牌类型，对应上边所述的第一种情况，只要符合规则均可以出" class="headerlink" title="7.1 判断所选择的牌，是否符合已经定义的出牌类型，对应上边所述的第一种情况，只要符合规则均可以出"></a>7.1 判断所选择的牌，是否符合已经定义的出牌类型，对应上边所述的第一种情况，只要符合规则均可以出</h4><pre><code> /**
+ * 获取出牌类型
+ * 
+ * @param outCard
+ * @return
+ */
+public OutCardType getOutCardType(List&lt;CardInfo&gt; outCard) &#123;
+    if (outCard != null) &#123;
+        int cardLength = outCard.size();
+
+        if (outCard.get(0).getCardNumber() == outCard.get(cardLength - 1).getCardNumber()) &#123;
+            switch (cardLength) &#123;
+                case 1:
+                    // 单牌
+                    return OutCardType.type1;
+                case 2:
+                    // 对子
+                    return OutCardType.type11;
+                case 3:
+                    // 三个
+                    return OutCardType.type111;
+                case 4:
+                    // 炸弹
+                    return OutCardType.type1111;
+            &#125;
+        &#125;
+
+        // 判断链子，最少三张
+        if (outCard.size() &gt;= 3) &#123;
+            List&lt;CardInfo&gt; tempCardList = new ArrayList&lt;&gt;();
+
+            // 先去掉2
+            for (int i = 0; i &lt; outCard.size(); i++) &#123;
+                if (outCard.get(i).getCardNumber() != 15) &#123;
+                    tempCardList.add(outCard.get(i));
+                &#125;
+            &#125;
+            // 重新进行排序
+            sortCardAsc(tempCardList);
+
+            // 判断是否为链子
+            List&lt;List&lt;CardInfo&gt;&gt; get123 = get123(outCard);
+            if (get123 != null &amp;&amp; get123.size() &gt; 0) &#123;
+                for (List&lt;CardInfo&gt; list : get123) &#123;
+                    if (list.size() == outCard.size()) &#123;
+                        return OutCardType.type123;
+                    &#125;
+                &#125;
+
+            &#125;
+
+            // 双对至少6张
+            if (outCard.size() &gt;= 6) &#123;
+                int length = outCard.size();
+                // 保存所有的对子
+                List&lt;CardInfo&gt; tempList = new ArrayList&lt;&gt;();
+                // 保存所有不包含2的对子
+                List&lt;CardInfo&gt; apairTempList = new ArrayList&lt;&gt;();
+                // 防止重复添加
+                List&lt;Integer&gt; integerList = new Vector&lt;&gt;();
+
+                // 先获取所有的对子
+                for (int i = 0; i &lt; length; i++) &#123;
+                    if (i + 1 &lt; length
+                            &amp;&amp; outCard.get(i).getCardNumber() == outCard.get(i + 1)
+                            .getCardNumber()) &#123;
+                        tempList.add(outCard.get(i));
+                        tempList.add(outCard.get(i + 1));
+                        i = i + 1;
+                    &#125;
+                &#125;
+
+                // 所有的牌均为对子
+                if (tempList.size() == outCard.size()) &#123;
+                    // 去除对2
+                    for (int i = 0, tempLength = tempList.size(); i &lt; tempLength; i++) &#123;
+                        if (integerList.indexOf(outCard.get(i).getCardNumber()) &lt; 0
+                                &amp;&amp; tempList.get(i).getCardNumber() != 15) &#123;
+                            apairTempList.add(tempList.get(i));
+                            integerList.add(tempList.get(i).getCardNumber());
+                        &#125;
+                        i = i + 1;
+                    &#125;
+
+                    // 到这里已经拿到了所有对子中的某一个单牌，只需拿出所有的链子
+                    List&lt;List&lt;CardInfo&gt;&gt; get123TempList = get123(apairTempList);
+                    for (int i = 0; i &lt; get123TempList.size(); i++) &#123;
+                        if (get123TempList.get(i).size() == length / 2) &#123;
+                            return OutCardType.type112233;
+                        &#125;
+                    &#125;
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+    return OutCardType.type0;
+&#125;
+</code></pre>
+<p>只有当选中牌的类型是已知类型，才能第一步判断出是否可以出牌，下一步则需要根据当前是不是自己轮，判断需要不需要压对方的牌</p>
+<h4 id="7-2-判断当前所选择的牌，是否符合规则，而且，是否比上一家出的牌大"><a href="#7-2-判断当前所选择的牌，是否符合规则，而且，是否比上一家出的牌大" class="headerlink" title="7.2 判断当前所选择的牌，是否符合规则，而且，是否比上一家出的牌大"></a>7.2 判断当前所选择的牌，是否符合规则，而且，是否比上一家出的牌大</h4><pre><code>/**
+ * 当上家出牌后，判断自己是否可以出牌
+ *
+ * @param outCard
+ * @param mAllCard
+ * @param mSelectCard
+ * @return
+ */
+public boolean whetherCanPlay(List&lt;CardInfo&gt; outCard, List&lt;CardInfo&gt; mAllCard,
+                              List&lt;CardInfo&gt; mSelectCard) &#123;
+    boolean isCardCanPlay = false;
+
+    // 获取对手牌型
+    OutCardType outCardType = getOutCardType(outCard);
+    OutCardType outCardTypeMy = getOutCardType(mSelectCard);
+    sortCard(outCard);
+    // 先对牌进行排序
+    sortCard(mSelectCard);
+
+    // 首先判断牌的张数是否一样
+    if (outCard.size() == mSelectCard.size() &amp;&amp; outCardType == outCardTypeMy) &#123;
+        int outCardName = Integer.valueOf(outCard.get(0).getCardName());
+        int mSelectCardName = Integer.valueOf(mSelectCard.get(0).getCardName());
+
+        // 相同，属于同一级牌之间压
+        switch (outCardType) &#123;
+            case type1:
+                if (mSelectCardName &gt; outCardName) &#123;
+                    isCardCanPlay = true;
+                &#125;
+                break;
+            case type11:
+                if (mSelectCardName &gt; outCardName) &#123;
+                    isCardCanPlay = true;
+                &#125;
+                break;
+            case type111:
+                if (mSelectCardName &gt; outCardName) &#123;
+                    isCardCanPlay = true;
+                &#125;
+                break;
+            case type1111:
+                if (mSelectCardName &gt; outCardName) &#123;
+                    isCardCanPlay = true;
+                &#125;
+                break;
+            case type123:
+                if (mSelectCardName &gt; outCardName) &#123;
+                    isCardCanPlay = true;
+                &#125;
+                break;
+            case type112233:
+                if (mSelectCardName &gt; outCardName) &#123;
+                    isCardCanPlay = true;
+                &#125;
+                break;
+            default:
+                isCardCanPlay = false;
+                break;
+        &#125;
+    &#125; else &#123;
+        // 当张数不一致时，有两种情况，即炸弹压2和连着的双对压对2
+        if (outCard.size() == 1 &amp;&amp; mSelectCard.size() == 4) &#123;
+            // 当别人为单个2且自己的Type为炸弹时
+            if (outCard.get(0).getCardNumber() == 15
+                    &amp;&amp; getOutCardType(mSelectCard) == OutCardType.type1111) &#123;
+                isCardCanPlay = true;
+            &#125;
+        &#125; else &#123;
+            // 别人出牌为一对2，自己应该用33-44-55-66或者55-66-77-88压
+            if (outCard.size() == 2 &amp;&amp; mSelectCard.size() &gt;= 8) &#123;
+                if (outCard.get(0).getCardNumber() == 15
+                        &amp;&amp; getOutCardType(mSelectCard) == OutCardType.type112233) &#123;
+                    isCardCanPlay = true;
+                &#125;
+            &#125; else &#123;
+                isCardCanPlay = false;
+            &#125;
+        &#125;
+    &#125;
+    return isCardCanPlay;
+&#125;
+</code></pre>
+<p>这里边包含了部分规则，比如同样的牌类型，比较大小，同时33445566可以压对二这样的规则</p>
+<h3 id="8-提示"><a href="#8-提示" class="headerlink" title="8. 提示"></a>8. 提示</h3><p> 提示算法比较简单，先获取上家出牌的类型，再获取自己手牌中对应类型的列表，逐个进行比较，直到找到合适的</p>
+<h3 id="AI"><a href="#AI" class="headerlink" title="AI"></a>AI</h3><p>这里除了上述洗牌、发牌、出牌等算法之外，还有单机模式的AI算法，回头有空了整理下，我再发上来吧。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>在这片文章中，只是写了一个针对斗地主类类游戏的牌的算法，包含了牌模型构建、洗牌、发牌、出牌等算法的实现，虽然游戏规则不同，但是思路大同小异，希望有需要的同学可以参考下。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">沙僧</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2017/07/10/20170710TienLen%E6%B8%B8%E6%88%8F%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E6%96%97%E5%9C%B0%E4%B8%BB%E7%AE%97%E6%B3%95/">http://example.com/2017/07/10/20170710TienLen%E6%B8%B8%E6%88%8F%E7%AE%97%E6%B3%95%E2%80%94%E2%80%94%E6%96%97%E5%9C%B0%E4%B8%BB%E7%AE%97%E6%B3%95/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">沙僧</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Android/">Android</a><a class="post-meta__tags" href="/tags/%E6%96%97%E5%9C%B0%E4%B8%BB/">斗地主</a><a class="post-meta__tags" href="/tags/%E7%AE%97%E6%B3%95/">算法</a></div><div class="post_share"><div class="social-share" data-image="http://image.jucaiwy.com/image/20160710/tienlen_small.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2017/12/11/20171211HEIF%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F%E6%8E%A2%E7%A7%98/"><img class="prev-cover" src="http://image.jucaiwy.com/image/20161211/heif_image.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">HEIF图片存储格式探秘</div></div></a></div><div class="next-post pull-right"><a href="/2016/06/23/20160623Android%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E2%80%94%E2%80%94Monkey/"><img class="next-cover" src="http://image.jucaiwy.com/image/20160623/monkey.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Android自动化测试——Money</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2016/02/25/20150225Android%E9%9B%86%E6%88%90OCR%E5%AE%9E%E7%8E%B0%E6%96%87%E5%AD%97%E8%AF%86%E5%88%AB/" title="Android集成OCR实现文字识别"><img class="cover" src="http://image.jucaiwy.com/image/20160225/ocr.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2016-02-25</div><div class="title">Android集成OCR实现文字识别</div></div></a></div><div><a href="/2015/03/02/20150302LogCatUtil/" title="LogcatUtil"><img class="cover" src="http://image.jucaiwy.com/image/20150302/logcat.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2015-03-02</div><div class="title">LogcatUtil</div></div></a></div><div><a href="/2015/09/02/20150902FindBugs%E5%AE%89%E8%A3%85%E5%8F%8A%E4%BD%BF%E7%94%A8/" title="FindBugs安装及使用"><img class="cover" src="http://image.jucaiwy.com/image/20150902/find_bugs_4.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2015-09-02</div><div class="title">FindBugs安装及使用</div></div></a></div><div><a href="/2015/09/15/20150905Fragment%E4%B8%ADListView.setOnItemClickListener%E5%A4%B1%E6%95%88%E7%9A%84%E9%97%AE%E9%A2%98/" title="Fragment中ListView.setOnItemClickListener失效的问题"><img class="cover" src="http://image.jucaiwy.com/image/20150905/android.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2015-09-15</div><div class="title">Fragment中ListView.setOnItemClickListener失效的问题</div></div></a></div><div><a href="/2015/10/16/20151016Android%E4%BD%BF%E7%94%A8SQLite%E6%89%B9%E9%87%8F%E5%85%A5%E5%BA%93%E6%93%8D%E4%BD%9C%E6%80%A7%E8%83%BD%E5%AF%B9%E6%AF%94/" title="Android使用SQLite批量入库操作性能对比"><img class="cover" src="http://image.jucaiwy.com/image/20151016/sqlite_2.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2015-10-16</div><div class="title">Android使用SQLite批量入库操作性能对比</div></div></a></div><div><a href="/2016/01/06/20160106EventBus%E7%AE%80%E4%BB%8B%E5%8F%8A%E4%BD%BF%E7%94%A8/" title="EventBus简介及使用"><img class="cover" src="http://image.jucaiwy.com/image/20160106/event_bus.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2016-01-06</div><div class="title">EventBus简介及使用</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="http://image.jucaiwy.com/favicon.ico" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">沙僧</div><div class="author-info__description">记录生活和学习</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">25</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">46</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">7</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/duanbokan"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/duanbokan" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:duanbokan@126.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">不负每一份热爱...</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%9A%E4%B9%89%E7%89%8C%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.</span> <span class="toc-text">1.定义牌对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-%E8%A7%84%E5%88%99"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 规则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-%E5%BB%BA%E6%A8%A1"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 建模</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-%E6%80%BB%E7%BB%93"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 总结</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%9E%84%E5%BB%BA%E4%B8%80%E5%89%AF%E7%89%8C"><span class="toc-number">2.</span> <span class="toc-text">2. 构建一副牌</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%B4%97%E7%89%8C"><span class="toc-number">3.</span> <span class="toc-text">3. 洗牌</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%8F%91%E7%89%8C"><span class="toc-number">4.</span> <span class="toc-text">4. 发牌</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%8D%8B%E7%89%8C"><span class="toc-number">5.</span> <span class="toc-text">5. 捋牌</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%87%BA%E7%89%8C"><span class="toc-number">6.</span> <span class="toc-text">6. 出牌</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-%E5%8D%95%E5%BC%A0%E7%89%8C"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 单张牌</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-2-%E5%AF%B9%E5%AD%90"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 对子</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-%E4%B8%89%E4%B8%AA"><span class="toc-number">7.</span> <span class="toc-text">6.3 三个</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-4-%E7%82%B8%E5%BC%B9"><span class="toc-number">8.</span> <span class="toc-text">6.4 炸弹</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-5-%E9%93%BE%E5%AD%90"><span class="toc-number">9.</span> <span class="toc-text">6.5 链子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-6-%E5%8F%8C%E9%93%BE"><span class="toc-number">10.</span> <span class="toc-text">6.6 双链</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E5%87%BA%E7%89%8C"><span class="toc-number">11.</span> <span class="toc-text">7 出牌</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-%E5%88%A4%E6%96%AD%E6%89%80%E9%80%89%E6%8B%A9%E7%9A%84%E7%89%8C%EF%BC%8C%E6%98%AF%E5%90%A6%E7%AC%A6%E5%90%88%E5%B7%B2%E7%BB%8F%E5%AE%9A%E4%B9%89%E7%9A%84%E5%87%BA%E7%89%8C%E7%B1%BB%E5%9E%8B%EF%BC%8C%E5%AF%B9%E5%BA%94%E4%B8%8A%E8%BE%B9%E6%89%80%E8%BF%B0%E7%9A%84%E7%AC%AC%E4%B8%80%E7%A7%8D%E6%83%85%E5%86%B5%EF%BC%8C%E5%8F%AA%E8%A6%81%E7%AC%A6%E5%90%88%E8%A7%84%E5%88%99%E5%9D%87%E5%8F%AF%E4%BB%A5%E5%87%BA"><span class="toc-number">11.1.</span> <span class="toc-text">7.1 判断所选择的牌，是否符合已经定义的出牌类型，对应上边所述的第一种情况，只要符合规则均可以出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-2-%E5%88%A4%E6%96%AD%E5%BD%93%E5%89%8D%E6%89%80%E9%80%89%E6%8B%A9%E7%9A%84%E7%89%8C%EF%BC%8C%E6%98%AF%E5%90%A6%E7%AC%A6%E5%90%88%E8%A7%84%E5%88%99%EF%BC%8C%E8%80%8C%E4%B8%94%EF%BC%8C%E6%98%AF%E5%90%A6%E6%AF%94%E4%B8%8A%E4%B8%80%E5%AE%B6%E5%87%BA%E7%9A%84%E7%89%8C%E5%A4%A7"><span class="toc-number">11.2.</span> <span class="toc-text">7.2 判断当前所选择的牌，是否符合规则，而且，是否比上一家出的牌大</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E6%8F%90%E7%A4%BA"><span class="toc-number">12.</span> <span class="toc-text">8. 提示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AI"><span class="toc-number">13.</span> <span class="toc-text">AI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">14.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/19/Flutter%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E6%A1%86%E6%9E%B6/" title="Flutter状态管理"><img src="http://image.jucaiwy.com/image/20220419/flutter_state_cover.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Flutter状态管理"/></a><div class="content"><a class="title" href="/2022/04/19/Flutter%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E6%A1%86%E6%9E%B6/" title="Flutter状态管理">Flutter状态管理</a><time datetime="2022-04-19T06:54:46.000Z" title="发表于 2022-04-19 14:54:46">2022-04-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/11/28/20191128Flutter%E2%80%94Json%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96/" title="Flutter—Json数据格式化"><img src="http://image.jucaiwy.com/image/20191128/flutter_json.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Flutter—Json数据格式化"/></a><div class="content"><a class="title" href="/2019/11/28/20191128Flutter%E2%80%94Json%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96/" title="Flutter—Json数据格式化">Flutter—Json数据格式化</a><time datetime="2019-11-28T06:54:46.000Z" title="发表于 2019-11-28 14:54:46">2019-11-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2018/01/04/20180104%E9%9B%86%E6%88%90ReactNative%E5%88%B0%E5%B7%B2%E6%9C%89%E5%B7%A5%E7%A8%8B/" title="AndroidStudio集成ReactNative到已有工程"><img src="http://image.jucaiwy.com/image/20180104/react_native.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="AndroidStudio集成ReactNative到已有工程"/></a><div class="content"><a class="title" href="/2018/01/04/20180104%E9%9B%86%E6%88%90ReactNative%E5%88%B0%E5%B7%B2%E6%9C%89%E5%B7%A5%E7%A8%8B/" title="AndroidStudio集成ReactNative到已有工程">AndroidStudio集成ReactNative到已有工程</a><time datetime="2018-01-04T11:34:46.000Z" title="发表于 2018-01-04 19:34:46">2018-01-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/12/21/20171221IJKPlayer%E4%BD%BF%E7%94%A8SeekTo%E8%B7%B3%E8%BD%AC%E5%85%B3%E9%94%AE%E5%B8%A7%E4%B8%8D%E6%AD%A3%E7%A1%AE/" title="IJKPlayer使用SeekTo跳转关键帧不正确"><img src="http://image.jucaiwy.com/image/20161221/ijk_player.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IJKPlayer使用SeekTo跳转关键帧不正确"/></a><div class="content"><a class="title" href="/2017/12/21/20171221IJKPlayer%E4%BD%BF%E7%94%A8SeekTo%E8%B7%B3%E8%BD%AC%E5%85%B3%E9%94%AE%E5%B8%A7%E4%B8%8D%E6%AD%A3%E7%A1%AE/" title="IJKPlayer使用SeekTo跳转关键帧不正确">IJKPlayer使用SeekTo跳转关键帧不正确</a><time datetime="2017-12-21T09:56:53.000Z" title="发表于 2017-12-21 17:56:53">2017-12-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/12/11/20171211HEIF%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F%E6%8E%A2%E7%A7%98/" title="HEIF图片存储格式探秘"><img src="http://image.jucaiwy.com/image/20161211/heif_image.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HEIF图片存储格式探秘"/></a><div class="content"><a class="title" href="/2017/12/11/20171211HEIF%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E6%A0%BC%E5%BC%8F%E6%8E%A2%E7%A7%98/" title="HEIF图片存储格式探秘">HEIF图片存储格式探秘</a><time datetime="2017-12-11T10:30:43.000Z" title="发表于 2017-12-11 18:30:43">2017-12-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 沙僧</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Welcome to my blog.</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div></div></body></html>
