@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>HarmonyOS开发—基础—环境搭建 | 沙僧</title><meta name="keywords" content="HarmonyOS , HarmonyOS开发 , HarmonyOS入门 , HarmonyOS环境搭建"><meta name="author" content="沙僧"><meta name="copyright" content="沙僧"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="HarmonyOS开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HarmonyOS开发—基础—环境搭建">
+<meta property="og:url" content="http://example.com/2023/12/22/20231221-HarmonyOS%E5%BC%80%E5%8F%91%E2%80%94%E5%9F%BA%E7%A1%80%E2%80%94%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/index.html">
+<meta property="og:site_name" content="沙僧">
+<meta property="og:description" content="HarmonyOS开发">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://image.jucaiwy.com/image/20240710/harmonyOS_logo.png">
+<meta property="article:published_time" content="2023-12-22T06:54:46.000Z">
+<meta property="article:modified_time" content="2024-07-10T10:22:22.176Z">
+<meta property="article:author" content="沙僧">
+<meta property="article:tag" content="HarmonyOS开发">
+<meta property="article:tag" content="环境搭建">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://image.jucaiwy.com/image/20240710/harmonyOS_logo.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/12/22/20231221-HarmonyOS%E5%BC%80%E5%8F%91%E2%80%94%E5%9F%BA%E7%A1%80%E2%80%94%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'HarmonyOS开发—基础—环境搭建',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-07-10 18:22:22'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="沙僧" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="http://image.jucaiwy.com/favicon.ico" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">51</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('http://image.jucaiwy.com/image/20240710/harmonyOS_logo.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">沙僧</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">HarmonyOS开发—基础—环境搭建</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-12-22T06:54:46.000Z" title="发表于 2023-12-22 14:54:46">2023-12-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-07-10T10:22:22.176Z" title="更新于 2024-07-10 18:22:22">2024-07-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/HarmonyOS/">HarmonyOS</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="HarmonyOS开发—基础—环境搭建"><a href="#HarmonyOS开发—基础—环境搭建" class="headerlink" title="HarmonyOS开发—基础—环境搭建"></a>HarmonyOS开发—基础—环境搭建</h2><h3 id="一、DevEco-Studio下载"><a href="#一、DevEco-Studio下载" class="headerlink" title="一、DevEco Studio下载"></a>一、DevEco Studio下载</h3><p>DevEco Studio是基于IntelliJ IDEA Community开源版本打造，是华为提供的面向全场景多设备，提供一站式的分布式应用开发平台。支持分布式多端开发、分布式多端调测、多端模拟仿真以及全方位的质量与安全保障。我们可以在华为官网上下载自己所需要的开发工具，一般情况下，开发工具版本和HarmonyOS版本一一对应。</p>
+<p>这里最新的是DevEco Studio 3.1。配套支持HarmonyOS 3.1版本及以上的应用及服务开发，提供了代码智能编辑、低代码开发、双向预览等功能，以及轻量构建工具DevEco Hvigor 、本地模拟器，持续提升应用及服务开发效率。下载链接：<a target="_blank" rel="noopener" href="https://developer.huawei.com/consumer/cn/deveco-studio/">https://developer.huawei.com/consumer/cn/deveco-studio/</a></p>
+<p>需要注意的是：DevEco Studio的编译构建依赖JDK，DevEco Studio预置了OpenJDK，版本为1.8，安装过程中会自动安装JDK。</p>
+<p><img src="http://image.jucaiwy.com/image/20240710/DevEcoStudio%E7%AE%80%E4%BB%8B.png" alt="img"></p>
+<p>下载完成以后，双击安装。</p>
+<h3 id="二、DevEco-Studio配置"><a href="#二、DevEco-Studio配置" class="headerlink" title="二、DevEco Studio配置"></a>二、DevEco Studio配置</h3><p>DevEcoStudio安装完成后，首次进入需要安装Node.js和ohpm。</p>
+<p><strong>Node.js：</strong>一个运行在Chrome V8引擎的JavaScript运行环境。现在被广泛的运用于Web前端工程化构建中。由于鸿蒙的Ark UI框架是基于Node.js进行开发的，所以像绝大多数Web前端开发框架一样，首先要在当前操作系统中安装Node.js框架。新版本的DevEco Studio已经集成了node.js的安装，无需前置安装。</p>
+<p><strong>ohpm：</strong>openharmony package manager，鸿蒙生态三方库的包管理工具，支持OpenHarmony共享包的发布、安装和依赖管理，同样在新版本的DevEco Studio中集成了安装包。</p>
+<p>这里只需要在首页单击Agree进入配置，配置node.js和ohpm的安装源，即可。推荐选择从华为镜像直接下载安装，选择本地安装路径。</p>
+<p><img src="http://image.jucaiwy.com/image/20240710/DevEcoStudioBasic.png" alt="img"></p>
+<p>Node.js和ohpm选择好以后，点击下一步，进入SDK Setup页面，选择和修改SDK安装位置：</p>
+<p><img src="http://image.jucaiwy.com/image/20240710/DevEcoStudioSDK.png" alt="img"></p>
+<p>这里需要点击Next以后，需要阅读和勾选License协议，再次点击下一步进入预览页面，确认各项下载路径无误以后，点击Next开始进行下载安装。</p>
+<p><img src="http://image.jucaiwy.com/image/20240710/DevEcoStudioSummary.png" alt="img"></p>
+<h3 id="三、DevEco-Studio主题"><a href="#三、DevEco-Studio主题" class="headerlink" title="三、DevEco Studio主题"></a>三、DevEco Studio主题</h3><p><img src="http://image.jucaiwy.com/image/20240710/DevEcoStudioTheme.png" alt="img"></p>
+<h3 id="四、DevEco-Studio-HelloWord"><a href="#四、DevEco-Studio-HelloWord" class="headerlink" title="四、DevEco Studio HelloWord"></a>四、DevEco Studio HelloWord</h3><p>安装和配置完成以后，就可以开始我们的第一个项目啦，当然必须是HelloWorld。通过Create Project 创建一个Empty Ability。</p>
+<p><img src="http://image.jucaiwy.com/image/20240710/DevEcoStudioCreate.png" alt="img"></p>
+<p>项目名称叫做HelloWorld，同步通过以后，可以进入HelloWorld工程中，默认是Project模式，定位到我们的Index.ets文件上。</p>
+<p><img src="http://image.jucaiwy.com/image/20240710/DevEcoStudioProject.png" alt="img"></p>
+<p>这里我们也可以通过右上角目录视图切换，切换至Ohos视图：</p>
+<p><img src="http://image.jucaiwy.com/image/20240710/DevEcoStudioIndex.png" alt="img"></p>
+<p>这里分别对这三个目录进行介绍：</p>
+<p>AppScope：主要用于存放整个应用公共的信息与资源</p>
+<p>entry：是默认的初始模块，其中ets中存放编写的代码文件，ets中page目录，则用来存放我们的页面文件，例如初始的index.ets就存放在ets-&gt;pages目录下；configuration中存放相应模块的配置文件；resources中存放资源文件</p>
+<p>configuration：工程、应用级别的配置文件</p>
+<p><strong>预览：</strong>右侧Previewer点击后，可以实时预览我们编写的页面在手机上的样式：</p>
+<p><img src="http://image.jucaiwy.com/image/20240710/DevEcoStudioPreView.png" alt="img"></p>
+<p>创建模拟器：通过菜单栏中Tools—DeviceManager打开这个页面，也可以通过右上角Device区域的Device Manager打开模拟器管理页面。选择好模拟器创建位置后，选择+号，可以新建本地模拟器。</p>
+<p><img src="http://image.jucaiwy.com/image/20240710/DevEcoStudioDevice.png" alt="img"></p>
+<p>第一次安装系统后，会提示下载安装模拟器，根据提示下载安装即可，然后就可以选择创建。</p>
+<p><img src="http://image.jucaiwy.com/image/20240710/DevEcoStudioHardWare.png" alt="img"></p>
+<p>安装完成后，可以一键运行：至此，Hello World工程，成功运行起来：</p>
+<p><img src="http://image.jucaiwy.com/image/20240710/DevEcoStudioHello.png" alt="img">   </p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">沙僧</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/12/22/20231221-HarmonyOS%E5%BC%80%E5%8F%91%E2%80%94%E5%9F%BA%E7%A1%80%E2%80%94%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">http://example.com/2023/12/22/20231221-HarmonyOS%E5%BC%80%E5%8F%91%E2%80%94%E5%9F%BA%E7%A1%80%E2%80%94%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">沙僧</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/HarmonyOS%E5%BC%80%E5%8F%91/">HarmonyOS开发</a><a class="post-meta__tags" href="/tags/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">环境搭建</a></div><div class="post_share"><div class="social-share" data-image="http://image.jucaiwy.com/image/20240710/harmonyOS_logo.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/12/23/20231222-HarmonyOS%E5%BC%80%E5%8F%91%E2%80%94%E5%9F%BA%E7%A1%80%E2%80%94ArkTS%E8%AF%AD%E8%A8%80%E4%BB%8B%E7%BB%8D/"><img class="prev-cover" src="http://image.jucaiwy.com/image/20240710/ArkTS.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">HarmonyOS开发—基础—ArkTS语言介绍</div></div></a></div><div class="next-post pull-right"><a href="/2022/04/19/20220419Flutter%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E6%A1%86%E6%9E%B6/"><img class="next-cover" src="http://image.jucaiwy.com/image/20220419/flutter_state_cover.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Flutter状态管理</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/12/29/20231229-HarmonyOS%E5%BC%80%E5%8F%91%E2%80%94%E5%9F%BA%E7%A1%80%E2%80%94%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E5%85%A5%E5%8F%A3-UIAbility/" title="HarmonyOS开发—基础—应用程序入口-UIAbility"><img class="cover" src="http://image.jucaiwy.com/image/Harmony/UIAbility/UIAbility.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-29</div><div class="title">HarmonyOS开发—基础—应用程序入口-UIAbility</div></div></a></div><div><a href="/2024/02/17/20240217-HarmonyOS%E5%BC%80%E5%8F%91%E2%80%94%E8%BF%9B%E9%98%B6%E2%80%94ArkUI%E8%BF%9B%E9%98%B6/" title="HarmonyOS开发—进阶—ArkUI进阶"><img class="cover" src="http://image.jucaiwy.com/image/Harmony/ArkUI/harmony-ui.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-02-17</div><div class="title">HarmonyOS开发—进阶—ArkUI进阶</div></div></a></div><div><a href="/2023/12/23/20231222-HarmonyOS%E5%BC%80%E5%8F%91%E2%80%94%E5%9F%BA%E7%A1%80%E2%80%94ArkTS%E8%AF%AD%E8%A8%80%E4%BB%8B%E7%BB%8D/" title="HarmonyOS开发—基础—ArkTS语言介绍"><img class="cover" src="http://image.jucaiwy.com/image/20240710/ArkTS.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-23</div><div class="title">HarmonyOS开发—基础—ArkTS语言介绍</div></div></a></div><div><a href="/2024/02/16/20240216-HarmonyOS%E5%BC%80%E5%8F%91%E2%80%94%E5%9F%BA%E7%A1%80%E2%80%94%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/" title="HarmonyOS开发—基础—自定义组件"><img class="cover" src="http://image.jucaiwy.com/image/Harmony/Plugin/harmony.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-02-16</div><div class="title">HarmonyOS开发—基础—自定义组件</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="http://image.jucaiwy.com/favicon.ico" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">沙僧</div><div class="author-info__description">记录生活和学习</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">51</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">8</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/duanbokan"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/duanbokan" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:duanbokan@126.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">不负每一份热爱...</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HarmonyOS%E5%BC%80%E5%8F%91%E2%80%94%E5%9F%BA%E7%A1%80%E2%80%94%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-number">1.</span> <span class="toc-text">HarmonyOS开发—基础—环境搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81DevEco-Studio%E4%B8%8B%E8%BD%BD"><span class="toc-number">1.1.</span> <span class="toc-text">一、DevEco Studio下载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81DevEco-Studio%E9%85%8D%E7%BD%AE"><span class="toc-number">1.2.</span> <span class="toc-text">二、DevEco Studio配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81DevEco-Studio%E4%B8%BB%E9%A2%98"><span class="toc-number">1.3.</span> <span class="toc-text">三、DevEco Studio主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81DevEco-Studio-HelloWord"><span class="toc-number">1.4.</span> <span class="toc-text">四、DevEco Studio HelloWord</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/02/17/20240217-HarmonyOS%E5%BC%80%E5%8F%91%E2%80%94%E8%BF%9B%E9%98%B6%E2%80%94ArkUI%E8%BF%9B%E9%98%B6/" title="HarmonyOS开发—进阶—ArkUI进阶"><img src="http://image.jucaiwy.com/image/Harmony/ArkUI/harmony-ui.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HarmonyOS开发—进阶—ArkUI进阶"/></a><div class="content"><a class="title" href="/2024/02/17/20240217-HarmonyOS%E5%BC%80%E5%8F%91%E2%80%94%E8%BF%9B%E9%98%B6%E2%80%94ArkUI%E8%BF%9B%E9%98%B6/" title="HarmonyOS开发—进阶—ArkUI进阶">HarmonyOS开发—进阶—ArkUI进阶</a><time datetime="2024-02-17T06:12:26.000Z" title="发表于 2024-02-17 14:12:26">2024-02-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/02/16/20240216-HarmonyOS%E5%BC%80%E5%8F%91%E2%80%94%E5%9F%BA%E7%A1%80%E2%80%94%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/" title="HarmonyOS开发—基础—自定义组件"><img src="http://image.jucaiwy.com/image/Harmony/Plugin/harmony.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HarmonyOS开发—基础—自定义组件"/></a><div class="content"><a class="title" href="/2024/02/16/20240216-HarmonyOS%E5%BC%80%E5%8F%91%E2%80%94%E5%9F%BA%E7%A1%80%E2%80%94%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/" title="HarmonyOS开发—基础—自定义组件">HarmonyOS开发—基础—自定义组件</a><time datetime="2024-02-16T11:32:46.000Z" title="发表于 2024-02-16 19:32:46">2024-02-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/12/29/20231229-HarmonyOS%E5%BC%80%E5%8F%91%E2%80%94%E5%9F%BA%E7%A1%80%E2%80%94%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E5%85%A5%E5%8F%A3-UIAbility/" title="HarmonyOS开发—基础—应用程序入口-UIAbility"><img src="http://image.jucaiwy.com/image/Harmony/UIAbility/UIAbility.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HarmonyOS开发—基础—应用程序入口-UIAbility"/></a><div class="content"><a class="title" href="/2023/12/29/20231229-HarmonyOS%E5%BC%80%E5%8F%91%E2%80%94%E5%9F%BA%E7%A1%80%E2%80%94%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E5%85%A5%E5%8F%A3-UIAbility/" title="HarmonyOS开发—基础—应用程序入口-UIAbility">HarmonyOS开发—基础—应用程序入口-UIAbility</a><time datetime="2023-12-29T01:52:46.000Z" title="发表于 2023-12-29 09:52:46">2023-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/12/23/20231222-HarmonyOS%E5%BC%80%E5%8F%91%E2%80%94%E5%9F%BA%E7%A1%80%E2%80%94ArkTS%E8%AF%AD%E8%A8%80%E4%BB%8B%E7%BB%8D/" title="HarmonyOS开发—基础—ArkTS语言介绍"><img src="http://image.jucaiwy.com/image/20240710/ArkTS.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HarmonyOS开发—基础—ArkTS语言介绍"/></a><div class="content"><a class="title" href="/2023/12/23/20231222-HarmonyOS%E5%BC%80%E5%8F%91%E2%80%94%E5%9F%BA%E7%A1%80%E2%80%94ArkTS%E8%AF%AD%E8%A8%80%E4%BB%8B%E7%BB%8D/" title="HarmonyOS开发—基础—ArkTS语言介绍">HarmonyOS开发—基础—ArkTS语言介绍</a><time datetime="2023-12-23T08:52:46.000Z" title="发表于 2023-12-23 16:52:46">2023-12-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/12/22/20231221-HarmonyOS%E5%BC%80%E5%8F%91%E2%80%94%E5%9F%BA%E7%A1%80%E2%80%94%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" title="HarmonyOS开发—基础—环境搭建"><img src="http://image.jucaiwy.com/image/20240710/harmonyOS_logo.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HarmonyOS开发—基础—环境搭建"/></a><div class="content"><a class="title" href="/2023/12/22/20231221-HarmonyOS%E5%BC%80%E5%8F%91%E2%80%94%E5%9F%BA%E7%A1%80%E2%80%94%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" title="HarmonyOS开发—基础—环境搭建">HarmonyOS开发—基础—环境搭建</a><time datetime="2023-12-22T06:54:46.000Z" title="发表于 2023-12-22 14:54:46">2023-12-22</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By 沙僧</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Welcome to my blog.</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div></div></body></html>
